@@ -19,29 +19,45 @@ return {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
+        -- defaults
+        "vim",
+        "vimdoc",
+        "lua",
+        "luadoc",
         "bash",
         "comment",
+        "markdown",
+        "yaml",
+        "regex",
+
+        -- web
         "javascript",
         "jsdoc",
         "jsonc",
-        "lua",
-        "markdown",
-        "regex",
-        "yaml",
+
+        -- go
         "go",
-        "git_config",
-        "git_rebase",
-        "gitattributes",
-        "gitignore",
         "gomod",
         "gosum",
         "gowork",
         "gotmpl",
+
+        -- git
+        "git_config",
+        "git_rebase",
+        "gitattributes",
+        "gitignore",
       },
       highlight = {
         enable = true,
       },
     },
+  },
+  {
+    "nvim-telescope/telescope.nvim",
+    config = function()
+      require "configs.telescope"
+    end,
   },
   {
     -- go lsp
