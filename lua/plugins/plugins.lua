@@ -90,4 +90,12 @@ return {
     --      return require "configs.null-ls"
     --    end,
     --  }
+    {
+        "nvim-tree/nvim-tree.lua",
+        opts = {
+            git = {
+                ignore = false,  -- 禁用 gitignore 过滤 -- 這是為了proto 產生的pb.go 要可以顯示
+            },
+        },
+    },
 }
