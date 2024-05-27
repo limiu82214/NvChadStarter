@@ -1,7 +1,9 @@
 local actions = require('telescope.actions')
 
 require('telescope').setup{
+  style = "bordered" , -- borderless / bordered
   defaults = {
+
     -- 设置默认主题为 `dropdown`
     theme = "dropdown",
     

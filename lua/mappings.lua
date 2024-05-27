@@ -23,3 +23,5 @@ map(
 map("n", "gt", ":bnext<CR>")
 map("n", "gT", ":bprevious<CR>")
 
+-- 恢復上一個搜尋
+map("n", "<leader>fr", ":Telescope resume<CR>")
