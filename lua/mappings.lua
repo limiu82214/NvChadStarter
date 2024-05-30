@@ -9,13 +9,13 @@ map("i", "jj", "<Esc>")
 
 -- Comment <ctrl + /> 如果你沒辦法，試著改成 <C-_>
 map({"n", "i"}, "<C-/>", function()
-  require("Comment.api").toggle.linewise.current()
+    require("Comment.api").toggle.linewise.current()
 end, { desc = "comment toggle" })
 map(
-  "v",
-  "<C-/>",
-  "<ESC><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>",
-  { desc = "comment toggle" }
+    "v",
+    "<C-/>",
+    "<ESC><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>",
+    { desc = "comment toggle" }
 )
 
 
@@ -28,7 +28,7 @@ map("n", "<leader>fr", ":Telescope resume<CR>")
 
 -- copy 相對路徑 的方法
 vim.api.nvim_create_user_command("CopyFileRelativePath", function()
-   -- 获取当前文件的绝对路径
+    -- 获取当前文件的绝对路径
     local absolute_path = vim.fn.expand("%:p")
     -- 获取当前工作目录
     local cwd = vim.fn.getcwd()
@@ -44,7 +44,7 @@ map("n", "<leader>cp", ":CopyFileRelativePath<CR>")
 
 -- copy 絕對路徑 的方法
 vim.api.nvim_create_user_command("CopyFileAbolutePath", function()
-   -- 获取当前文件的绝对路径
+    -- 获取当前文件的绝对路径
     local absolute_path = vim.fn.expand("%:p")
     local line_number = vim.fn.line('.')
 
